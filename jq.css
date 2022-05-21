@@ -1,0 +1,49 @@
+.mainDiv{
+    margin: 2%;
+}
+#printTable{
+    
+    margin:2% 0 0 5%;
+    width: 90%;
+    font-size: 110%;
+    text-align: center;
+    border:#e2ddbf;
+}
+
+
+#select_OS,  #select_Brand{
+    margin:2% 0 0 5%;
+    width:19.82%;
+    border: 3px solid #4c847b;
+    border-radius: 5px;
+    font-size: 108%;
+}
+th{
+    padding: 0 0 0 0.5%;
+    background-color: #4c847b;
+    font-size: 120%;
+    color: #e2ddbf;
+}
+
+
+tr:nth-child(odd) {
+    background: #e2ddbf;
+    color: #4c847b
+  }
+
+
+th,td{
+    border-radius: 4px;
+}
+
+td:nth-child(5) {
+    color: red;
+  }
+
+td:nth-child(5):hover {
+    background-color: red;
+    color: #e2ddbf;
+
+}
+
+
