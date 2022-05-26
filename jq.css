@@ -11,20 +11,70 @@
 }
 
 
-#select_OS,  #select_Brand{
-    margin:2% 0 0 5%;
+#select_OS{
+    margin:2% 0 0 5.2%;
     width:19.82%;
     border: 3px solid #4c847b;
     border-radius: 5px;
     font-size: 108%;
 }
-th{
-    padding: 0 0 0 0.5%;
-    background-color: #4c847b;
-    font-size: 120%;
-    color: #e2ddbf;
+#select_Brand{
+    margin:2% 0 0 2.5%;
+    width:19.82%;
+    border: 3px solid #4c847b;
+    border-radius: 5px;
+    font-size: 108%;
 }
 
+
+#productD{
+    margin:2% 0 0 2%;
+    width:21.5%;
+    padding: 0.2% 0.1% 0.2% 0.8%;
+    border: 3px solid #4c847b;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 103%;
+    font-weight: bolder;
+    border-right: none;
+    outline:none;
+    
+}
+#searchBtn{
+    margin:2% 0 0 -0.85%;
+    width:7%;
+    padding: 0.2% 0.1% 0.2% 0.3%;
+    border: 3px solid #4c847b;
+    border-radius: 0 5px 5px 0;
+    font-size: 103%;
+    font-weight: bolder;
+    color: #e2ddbf;
+    background-color: #4c847b;
+    border-left: none;
+}
+
+#searchBtn:hover {
+    background-color:#e2ddbf;
+    color :#4c847b; 
+
+}
+
+
+.ErrorMsg{
+    width:7%;
+    margin:2% 0 0 1.5%;
+    width:12%;
+    padding: 0.2% 0.1% 0.2% 0.3%;
+    border: 3px solid #4c847b;
+    border-radius: 5px;
+    color: red;
+    font-size: 90%;
+    outline:none;
+}
+.ErrorMsg::placeholder{
+    color: rgb(230, 75, 75);
+    font-size: 106%;
+    font-weight: bolder;
+}
 
 tr:nth-child(odd) {
     background: #e2ddbf;
@@ -46,4 +96,9 @@ td:nth-child(5):hover {
 
 }
 
-
+th{
+    padding: 0 0 0 0.5%;
+    background-color: #4c847b;
+    font-size: 120%;
+    color: #e2ddbf;
+}

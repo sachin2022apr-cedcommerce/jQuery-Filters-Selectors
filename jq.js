@@ -123,7 +123,7 @@ $(document).ready(function () {
         }
         
         console.log("On Change OS");
-
+        $(".ErrorMsg").val("");
     });
 
 
@@ -195,9 +195,10 @@ $(document).ready(function () {
             }
 
             $("#printTable").html(tableItem);
+            
         }
 
-
+        $(".ErrorMsg").val("");
     });
 
 
@@ -209,4 +210,48 @@ $(document).ready(function () {
         $(this).closest("tr").hide();
       });
 
+    
+    $("#searchBtn").click(function(){ 
+        value = $("#productD").val();
+        if(value != "" ){
+            tableItem = "";
+
+            tableItem += "<tr><th>ID</th><th>Name</th><th>Brand</th><th>Operating System</th><th>Remove</th></tr>";
+        
+            var count = 0;
+            for (var i = 0; i < products.length; i++) {
+                
+                if(value == products[i].id || value == products[i].name){
+                    tableItem += "<tr><td>" + products[i].id + "</td><td>" + products[i].name + "</td><td>" + products[i].brand + "</td><td>" + products[i].os + "</td><td class='removeProduct'><b>" + products[i].remove + "<b></td></tr>";
+                    count++;
+                }
+            }
+
+            $("#printTable").html(tableItem);
+
+            if(count > 0)
+                $(".ErrorMsg").val("");
+            else
+                $(".ErrorMsg").val("Enter proper Data");
+
+
+        }
+        else if(value == "" ){
+            tableItem = "";
+
+            tableItem += "<tr><th>ID</th><th>Name</th><th>Brand</th><th>Operating System</th><th>Remove</th></tr>";
+        
+
+            for (var i = 0; i < products.length; i++) {
+
+                tableItem += "<tr><td>" + products[i].id + "</td><td>" + products[i].name + "</td><td>" + products[i].brand + "</td><td>" + products[i].os + "</td><td class='removeProduct'><b>" + products[i].remove + "<b></td></tr>";
+                
+            }
+            $("#printTable").html(tableItem);
+            $(".ErrorMsg").val("Input ID or Name");
+            $(".ErrorMsg").val("Don't leave blank");
+        }
+        
+
+    });
 });
